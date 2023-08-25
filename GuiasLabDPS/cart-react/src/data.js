@@ -19,7 +19,7 @@ export const data = [
     title: "Cuentos de Barro",
     price: 30,
     urlImage:
-      "https://www.librosdelaballena.com/wpcontent/uploads/2020/05/cuentos-barro-244x300.png",
+      "https://www.librosdelaballena.com/wp-content/uploads/2020/05/cuentos-barro-244x300.png",
     quantity: 1,
   },
   {
@@ -35,7 +35,7 @@ export const data = [
     title: "Harry Potter Pack",
     price: 390,
     urlImage:
-      "https://contentv2.tapcommerce.com/cover/large/9789878000473_1.jpg?id_com=1113",
+      "https://contentv2.tap-commerce.com/cover/large/9789878000473_1.jpg?id_com=1113",
     quantity: 1,
   },
 ];

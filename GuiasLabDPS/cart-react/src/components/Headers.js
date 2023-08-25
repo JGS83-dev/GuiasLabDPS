@@ -23,8 +23,7 @@ export const Headers = () => {
                 <span className="precio-producto-carrito">$80</span>
               </div>
               <img
-                src="https://static.vecteezy.com/system/resources/previews/018/887/462/origin
-al/signs-close-icon-png.png"
+                src="https://static.vecteezy.com/system/resources/previews/018/887/462/original/signs-close-icon-png.png"
                 alt="cerrar"
                 className="icon-close"
               />
