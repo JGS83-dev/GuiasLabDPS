@@ -42,6 +42,11 @@ export const Header = ({
                 {allProducts.map((product) => (
                   <div className="cart-product" key={product.id}>
                     <div className="info-cart-product">
+                      <img
+                        src={product.urlImage}
+                        alt={product.title}
+                        className="icon-cart"
+                      />
                       <span className="cantidad-producto-carrito">
                         {product.quantity}
                       </span>
@@ -51,8 +56,7 @@ export const Header = ({
                       </span>
                     </div>
                     <img
-                      src="https://static.vecteezy.com/system/resources/previews/018/887/462/original
-/signs-close-icon-png.png"
+                      src="https://static.vecteezy.com/system/resources/previews/018/887/462/original/signs-close-icon-png.png"
                       alt="cerrar"
                       className="icon-close"
                       onClick={() => onDeleteProduct(product)}
