@@ -12,7 +12,10 @@ import paises from "../data/paises";
 
 const Formulario = ({ busqueda, guardarBusqueda, guardarConsulta }) => {
   const { pais } = busqueda;
+  const [animacionBoton] = useState(new Animated.Value(1));
+
   const consultarPais = () => {
+    console.log("Realizando busqueda con:", pais);
     if (pais.trim() === "") {
       mostrarAlerta();
       return;
@@ -23,6 +26,14 @@ const Formulario = ({ busqueda, guardarBusqueda, guardarConsulta }) => {
 
   const mostrarAlerta = () => {
     Alert.alert("Error", "Debe seleccionar un pais", [{ Text: "Entendido" }]);
+  };
+
+  const animacionEntrada = () => {
+    Animated.spring(animacionBoton, {
+      toValue: 0.7,
+      useNativeDriver: true,
+      duration: 500,
+    }).start();
   };
 
   const animacionSalida = () => {
