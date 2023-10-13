@@ -8,11 +8,10 @@ import {
   TouchableNativeFeedback,
   View,
 } from "react-native";
-import { paises } from "../data/paises";
+import paises from "../data/paises";
 
 const Formulario = ({ busqueda, guardarBusqueda, guardarConsulta }) => {
   const { pais } = busqueda;
-
   const consultarPais = () => {
     if (pais.trim() === "") {
       mostrarAlerta();

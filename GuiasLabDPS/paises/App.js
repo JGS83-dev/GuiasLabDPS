@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Formulario from "./src/componentes/Formulario";
@@ -9,7 +10,7 @@ export default function App() {
     <View style={styles.app}>
       <StatusBar style="auto" />
       <View style={styles.contenido}>
-        <Formulario busqueda={busqueda} guardarBusqueda={guardarBusqueda} />
+        <Formulario busqueda={busqueda} guardarBusqueda={setBusqueda} />
       </View>
     </View>
   );
