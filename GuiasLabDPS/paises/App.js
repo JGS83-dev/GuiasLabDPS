@@ -12,7 +12,7 @@ export default function App() {
     const { pais } = busqueda;
     const consultarPais = async () => {
       if (consultar) {
-        const url = `https://servicodados.ibge.gov.br/api/docs/paises/${pais}`;
+        const url = `https://servicodados.ibge.gov.br/api/v1/paises/${pais}`;
         try {
           const respuesta = await fetch(url);
           const resultado = await respuesta.json();
