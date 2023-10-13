@@ -61,7 +61,7 @@ const Formulario = ({ busqueda, guardarBusqueda, guardarConsulta }) => {
           onPress={() => consultarPais()}
         >
           {paises.map((ele) => (
-            <Picker.Item label={ele.label} value={ele.value} />
+            <Picker.Item label={ele.label} value={ele.value} key={ele.value} />
           ))}
         </Picker>
         <TouchableNativeFeedback
