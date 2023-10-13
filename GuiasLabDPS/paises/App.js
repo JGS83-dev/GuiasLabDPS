@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { Alert, StyleSheet, Text, View } from "react-native";
 import Formulario from "./src/componentes/Formulario";
+import Pais from "./src/componentes/Pais";
 
 export default function App() {
   const [busqueda, setBusqueda] = useState({ pais: "" });
@@ -14,11 +15,14 @@ export default function App() {
       if (consultar) {
         const url = `https://servicodados.ibge.gov.br/api/v1/paises/${pais}`;
         try {
+          console.log("Url de Fetch:", url);
           const respuesta = await fetch(url);
+          console.log("Resultado Fetch:", respuesta);
           const resultado = await respuesta.json();
           setresultado(resultado);
           setconsultar(false);
         } catch (error) {
+          console.log("Error al hacer fetch:", error);
           mostrarAlerta();
         }
       }
@@ -40,6 +44,7 @@ export default function App() {
           guardarBusqueda={setBusqueda}
           guardarConsulta={setconsultar}
         />
+        <Pais resultado={resultado} />
       </View>
     </View>
   );
