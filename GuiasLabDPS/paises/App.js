@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Alert, StyleSheet, Text, View } from "react-native";
 import Formulario from "./src/componentes/Formulario";
 
 export default function App() {
@@ -25,6 +25,11 @@ export default function App() {
     };
     consultarPais();
   }, [consultar]);
+
+  const mostrarAlerta = () => {
+    Alert.alert("Error", "No hay resultado intenta con otra ciudad o país"),
+      [{ Text: "Ok" }];
+  };
 
   return (
     <View style={styles.app}>
