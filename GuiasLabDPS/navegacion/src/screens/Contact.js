@@ -8,5 +8,3 @@ export default function Contact() {
     </View>
   );
 }
-
-npm i --save @react-navigation/native @react-navigation/stack @react-native-community/masked-view react-native-safe-area-context  react-native-screens react-native-gesture-handler
